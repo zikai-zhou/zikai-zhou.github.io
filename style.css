@@ -111,6 +111,28 @@ p a:hover {
   text-decoration: underline;
 }
 
+/* ── Awards ── */
+.award-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.award-list li {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.award-list li::before {
+  content: "~";
+  position: absolute;
+  left: 0;
+  color: var(--border);
+}
+
 /* ── Publications ── */
 .pub-list {
   list-style: none;
