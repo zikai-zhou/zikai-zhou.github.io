@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zikai-zhou.github.io/sitemap.xml
