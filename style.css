@@ -155,6 +155,14 @@ p a:hover {
   border-left-color: var(--accent);
 }
 
+.pub-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.45;
+  display: block;
+}
+
 .pub-title a {
   font-weight: 600;
   font-size: 0.95rem;
