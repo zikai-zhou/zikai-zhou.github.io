@@ -124,6 +124,16 @@ p strong {
   font-weight: 600;
 }
 
+.callout {
+  margin-top: 1rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--accent-subtle);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
 p a {
   color: var(--accent);
   text-decoration: none;
