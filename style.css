@@ -230,6 +230,35 @@ p a:hover {
   background: var(--border);
 }
 
+/* ── Mentees ── */
+.mentee-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.mentee-list li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+}
+
+.mentee-list li a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mentee-list li a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
 /* ── Footer ── */
 footer {
   margin-top: 3.5rem;
