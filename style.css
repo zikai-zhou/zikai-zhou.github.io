@@ -372,6 +372,13 @@ footer {
   border-top: 1px solid var(--border);
 }
 
+.visitor-map {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  min-height: 60px;
+}
+
 footer p {
   font-size: 0.78rem;
   color: #aaa;
