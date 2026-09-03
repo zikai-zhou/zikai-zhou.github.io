@@ -165,30 +165,6 @@ p a:hover {
   border-left-color: var(--accent);
 }
 
-.pub-list li.has-thumb {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 0.9rem;
-}
-
-.pub-thumb {
-  width: 56px;
-  height: 56px;
-  flex-shrink: 0;
-  border-radius: 6px;
-  object-fit: cover;
-  background: var(--accent-subtle);
-  padding: 4px;
-}
-
-.pub-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  flex: 1;
-  min-width: 0;
-}
-
 .pub-title {
   font-weight: 600;
   font-size: 0.95rem;

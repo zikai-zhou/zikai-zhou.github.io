@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-  <rect width="100" height="100" rx="16" fill="#0f766e"/>
-  <text x="50" y="45" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="white">1010</text>
-  <text x="50" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" fill="white" opacity="0.65">0110</text>
-  <path d="M20 82 L80 82" stroke="white" stroke-width="2" opacity="0.4"/>
-</svg>
