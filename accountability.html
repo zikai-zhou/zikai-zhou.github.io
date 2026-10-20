@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accountable AI — Cyrus Zikai Zhou</title>
+  <meta name="description" content="What Cyrus Zikai Zhou means by accountable AI: decisions that can be examined, justified, and contested, and three routes to get there — by construction, by training, and by measurement.">
+  <meta name="author" content="Cyrus Zikai Zhou">
+  <link rel="canonical" href="https://zikai-zhou.github.io/accountability.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Accountable AI — Cyrus Zikai Zhou">
+  <meta property="og:description" content="An AI system is accountable when its decisions can be examined, justified, and contested.">
+  <meta property="og:url" content="https://zikai-zhou.github.io/accountability.html">
+  <meta property="og:image" content="https://zikai-zhou.github.io/cyrus.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Accountable AI — Cyrus Zikai Zhou">
+  <meta name="twitter:description" content="An AI system is accountable when its decisions can be examined, justified, and contested.">
+  <meta name="twitter:image" content="https://zikai-zhou.github.io/cyrus.jpg">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>C</text></svg>">
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <a href="./" class="back-link">&larr; Cyrus Zikai Zhou</a>
+      <h1>Accountable AI</h1>
+    </header>
+
+    <section class="research">
+      
+      <h3>What I mean by accountability</h3>
+      <p>An AI system is accountable when its decisions can be <strong>examined, justified, and contested</strong>.</p>
+      <p>Imagine a model screens a patient for a clinical trial and says: <em>&ldquo;Excluded: kidney function is below the trial&rsquo;s threshold.&rdquo;</em> Three questions decide whether that answer is accountable:</p>
+      <ol>
+        <li><strong>What decided it?</strong> Which facts from the record, which eligibility rules, and what the model assumed where the record was silent.</li>
+        <li><strong>Is the explanation true?</strong> Give the same patient normal kidney function and run it again. If the patient is still excluded, kidney function was not the reason, no matter how reasonable the explanation sounded.</li>
+        <li><strong>What would change it?</strong> The patient, the doctor, or the trial coordinator should be able to see which conditions would flip the decision, so they can check them, correct a wrong record, or appeal.</li>
+      </ol>
+      <p>The second question is the heart of it. I test explanations with counterfactuals: change one thing, rerun, and check whether the system&rsquo;s own account predicted what happened.</p>
+
+      <h3>Why it matters</h3>
+      <p>Language models now help decide who qualifies for a trial, how a contract clause is read, and which code ships. In these settings a correct answer is not enough. Some examples of what can go wrong, even when the answer looks fine:</p>
+      <ul>
+        <li>A user writes <em>&ldquo;I think the answer is B, but I&rsquo;m not sure.&rdquo;</em> The model answers B and explains its reasoning step by step, never mentioning the user. Without the user&rsquo;s guess, it would have answered C. The user leaves more confident than they should be, because their own guess came back to them as the model&rsquo;s conclusion.</li>
+        <li>An assistant cites a retrieved document as the basis for its answer. Remove the document and the answer is the same: the citation was decoration. Or the reverse: the document changed the answer, and the assistant says nothing.</li>
+        <li>Two identical loan applications get different decisions on different days, each with a confident, plausible explanation.</li>
+      </ul>
+      <p>In every case the explanation reads well. The problem is that nobody checked it against what actually drove the decision. Asking a model to explain itself is not the same as holding it accountable.</p>
+
+      <h3>How to get there</h3>
+      <p>I work on three complementary routes:</p>
+      <ul>
+        <li><strong>Accountable by construction.</strong> Let the language model translate records, rules, and policies into formal constraints, and let a solver make the decision. The same facts always give the same decision, and every decision comes with a checkable trace, the assumptions it made, and the conditions that would flip it. (<a href="https://arxiv.org/abs/2609.03366" target="_blank">VERDICT</a>, EMNLP 2026 Outstanding Paper; <a href="https://arxiv.org/abs/2604.08849" target="_blank">SatIR</a>)</li>
+        <li><strong>Accountable by training.</strong> When a model must explain itself in plain language, teach it to say what actually changed its answer, using labels from its own counterfactual behavior: run it with and without an input and see whether the answer moves. (<a href="https://arxiv.org/abs/2610.35295" target="_blank">CREDIT</a>)</li>
+        <li><strong>Accountable by measurement.</strong> Score what models say about themselves against what happens when their inputs change. You cannot fix a gap you do not measure.</li>
+      </ul>
+      <p>Next, I want to test these ideas where real decisions are messy: missing records, ambiguous rules, many interacting factors. And I want to understand why models so often fail to report what drove their answers: whether it comes from how they are trained or from how they are built.</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Cyrus Zhou</p>
+    </footer>
+  </main>
+</body>
+</html>
